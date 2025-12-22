@@ -9,7 +9,7 @@ import {useEffect, useState} from "react";
 import {ConnectQR} from "./connect-qr";
 import {Spinner} from "./ui/spinner";
 import {Separator} from "./ui/separator";
-import {Stethoscope} from "lucide-react";
+import {NotepadText} from "lucide-react";
 
 // Pet data - matching the structure from all-pet-profiles
 const pets = [
@@ -205,7 +205,7 @@ export default function IndividualPetProfile({params}) {
 					</div>
 					<Separator className="mt-6" />
 					<p className="text-xs font-medium text-muted-foreground my-4">
-						Medical Conditions
+						Special Notes
 					</p>
 					{pet?.medicalConditions?.length > 0 ? (
 						<div className="flex flex-col items-start gap-4">
@@ -227,9 +227,9 @@ export default function IndividualPetProfile({params}) {
 							type="button"
 							variant="secondary"
 							className="w-full border-gray-200 text-sm hover:bg-gray-100"
-							onClick={() => router.push("/add-pet-medical-details")}
+							onClick={() => router.push("/add-pet-notes")}
 						>
-							<Stethoscope className="size-4" /> Add Medical Condition
+							<NotepadText className="size-4" /> Add Special Note
 						</Button>
 					)}
 					<Separator className="mt-6" />

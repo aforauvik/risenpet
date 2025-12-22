@@ -20,7 +20,7 @@ import AvatarUpload from "@/components/avatar-upload";
 import AllPetProfiles from "@/components/all-pet-profiles";
 import IndividualPetProfile from "@/components/individual-pet-profile";
 import {ConnectQR} from "@/components/connect-qr";
-import {AddPetMedicalDetails} from "@/components/add-pet-medical-details";
+import {AddPetSpecialNotes} from "@/components/add-pet-medical-details";
 
 export default function Page() {
 	return (
@@ -58,7 +58,7 @@ export default function Page() {
 						<AllPetProfiles />
 						{/* <IndividualPetProfile /> */}
 						{/* <EmptyState /> */}
-						{/* <AddPetMedicalDetails /> */}
+						{/* <AddPetSpecialNotes /> */}
 					</div>
 				</div>
 			</SidebarInset>

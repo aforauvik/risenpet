@@ -87,9 +87,10 @@ export function AddPetMedicalDetails() {
 					<StepperContent value={1}>
 						<Card className="w-full max-w-sm mx-auto">
 							<CardHeader>
-								<CardTitle>Medical Conditions</CardTitle>
+								<CardTitle>Special Notes</CardTitle>
 								<CardDescription>
-									Enter your pet's medical details
+									Add information about your pet's special needs, medical
+									conditions, habits, or any other important details.
 								</CardDescription>
 							</CardHeader>
 							<CardContent>
@@ -101,7 +102,7 @@ export function AddPetMedicalDetails() {
 													{index > 0 && <Separator />}
 													<div className="flex items-center justify-between">
 														<h3 className="text-sm font-medium text-muted-foreground">
-															Condition {index + 1}
+															Note {index + 1}
 														</h3>
 														{conditions.length > 1 && (
 															<Button
@@ -117,12 +118,12 @@ export function AddPetMedicalDetails() {
 													</div>
 													<Field>
 														<FieldLabel htmlFor={`medical-condition-${index}`}>
-															Medical Condition
+															Note
 														</FieldLabel>
 														<Input
 															id={`medical-condition-${index}`}
 															type="text"
-															placeholder="e.g. Diabetes"
+															placeholder="e.g. Max is afraid of loud noises"
 															value={condition.condition}
 															onChange={(e) =>
 																handleConditionChange(
@@ -137,10 +138,10 @@ export function AddPetMedicalDetails() {
 													<Field>
 														<div className="flex flex-col w-full gap-3">
 															<Label htmlFor={`condition-description-${index}`}>
-																Condition Description
+																Note Details
 															</Label>
 															<Textarea
-																placeholder="Type your condition description here."
+																placeholder="Type your note details here."
 																id={`condition-description-${index}`}
 																value={condition.description}
 																onChange={(e) =>
@@ -161,7 +162,7 @@ export function AddPetMedicalDetails() {
 												className="w-full border-gray-200 text-sm hover:bg-gray-100"
 												onClick={handleAddAnotherCondition}
 											>
-												<PlusIcon className="size-4" /> Add Another Condition
+												<PlusIcon className="size-4" /> Add Another Note
 											</Button>
 											<Separator />
 
