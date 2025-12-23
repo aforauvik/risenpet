@@ -236,13 +236,13 @@ export default function IndividualPetProfile({params}) {
 				</CardContent>
 
 				<CardFooter className="flex flex-col items-center justify-between gap-4">
-					<Button className="w-full">Edit</Button>
+					<Button className="w-full">Edit Pet Profile</Button>
 					<Button
 						className="w-full"
 						variant="outline"
 						onClick={() => router.push("/dashboard")}
 					>
-						Cancel
+						Go Back
 					</Button>
 				</CardFooter>
 			</Card>

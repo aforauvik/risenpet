@@ -36,7 +36,7 @@ export function OTPForm({className, ...props}) {
 		<div className={cn("flex flex-col gap-6", className)} {...props}>
 			<form onSubmit={handleSubmit}>
 				<FieldGroup>
-					<div className="flex flex-col items-center gap-2 text-center">
+					<div className="flex flex-col items-center justify-center gap-2 text-center">
 						<a
 							href="#"
 							className="flex flex-col items-center gap-2 font-medium"
@@ -63,19 +63,22 @@ export function OTPForm({className, ...props}) {
 							value={otp}
 							onChange={setOtp}
 							required
-							containerClassName="gap-4"
 						>
-							<InputOTPGroup className="gap-2.5 *:data-[slot=input-otp-slot]:h-16 *:data-[slot=input-otp-slot]:w-12 *:data-[slot=input-otp-slot]:rounded-md *:data-[slot=input-otp-slot]:border *:data-[slot=input-otp-slot]:text-xl">
+							<InputOTPGroup className="md:gap-2.5 lg:gap-4 gap-2 *:data-[slot=input-otp-slot]:h-16 *:data-[slot=input-otp-slot]:w-12 *:data-[slot=input-otp-slot]:rounded-md *:data-[slot=input-otp-slot]:border *:data-[slot=input-otp-slot]:text-xl">
 								<InputOTPSlot index={0} />
 								<InputOTPSlot index={1} />
 								<InputOTPSlot index={2} />
-							</InputOTPGroup>
-							<InputOTPSeparator />
-							<InputOTPGroup className="gap-2.5 *:data-[slot=input-otp-slot]:h-16 *:data-[slot=input-otp-slot]:w-12 *:data-[slot=input-otp-slot]:rounded-md *:data-[slot=input-otp-slot]:border *:data-[slot=input-otp-slot]:text-xl">
+								<InputOTPSeparator className="md:hidden lg:block hidden" />
 								<InputOTPSlot index={3} />
 								<InputOTPSlot index={4} />
 								<InputOTPSlot index={5} />
 							</InputOTPGroup>
+
+							{/* <InputOTPGroup className="gap-2.5 *:data-[slot=input-otp-slot]:h-16 *:data-[slot=input-otp-slot]:w-12 *:data-[slot=input-otp-slot]:rounded-md *:data-[slot=input-otp-slot]:border *:data-[slot=input-otp-slot]:text-xl">
+								<InputOTPSlot index={3} />
+								<InputOTPSlot index={4} />
+								<InputOTPSlot index={5} />
+							</InputOTPGroup> */}
 						</InputOTP>
 						<FieldDescription className="text-center">
 							Didn&apos;t receive the code? <a href="#">Resend</a>

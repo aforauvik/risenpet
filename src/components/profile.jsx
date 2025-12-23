@@ -33,7 +33,10 @@ export default function Profile() {
 		<Card className="w-full max-w-md mx-auto">
 			<CardHeader>
 				<CardTitle>Profile</CardTitle>
-				<CardDescription>Your profile details</CardDescription>
+				<CardDescription>
+					Your profile details. Your phone number and email will be used to
+					contact you in case your pet is missing.
+				</CardDescription>
 			</CardHeader>
 			<CardContent>
 				<form ref={formRef} onSubmit={handleSubmit}>
@@ -58,21 +61,20 @@ export default function Profile() {
 									required
 								/>
 							</Field>
+							<Field>
+								<FieldLabel htmlFor="phone">Phone</FieldLabel>
+								<Input
+									id="phone"
+									type="tel"
+									placeholder="e.g. +1234567890"
+									required
+								/>
+							</Field>
 
 							<div className="flex flex-col gap-4">
 								<Field>
 									<Button type="submit" className="w-full">
 										Edit Profile
-									</Button>
-								</Field>
-								<Field>
-									<Button
-										type="button"
-										variant="outline"
-										className="w-full"
-										onClick={handleCancel}
-									>
-										Cancel
 									</Button>
 								</Field>
 							</div>
