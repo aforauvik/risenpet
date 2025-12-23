@@ -20,8 +20,8 @@ import AvatarUpload from "@/components/avatar-upload";
 import AllPetProfiles from "@/components/all-pet-profiles";
 import IndividualPetProfile from "@/components/individual-pet-profile";
 import {ConnectQR} from "@/components/connect-qr";
-import {AddPetSpecialNotes} from "@/components/add-pet-medical-details";
-
+import DeleteAccount from "@/components/delete-account";
+import Profile from "@/components/profile";
 export default function Page() {
 	return (
 		<SidebarProvider>

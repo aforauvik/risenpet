@@ -13,6 +13,8 @@ import {
 	Settings2,
 	PawPrint,
 	SquareTerminal,
+	User,
+	CreditCard,
 } from "lucide-react";
 
 import {NavMain} from "@/components/nav-main";
@@ -40,6 +42,20 @@ const data = {
 			title: "Pet Profile",
 			url: "/dashboard",
 			icon: PawPrint,
+			isActive: true,
+			items: [],
+		},
+		{
+			title: "User Profile",
+			url: "/profile",
+			icon: User,
+			isActive: true,
+			items: [],
+		},
+		{
+			title: "Billing",
+			url: "/billing",
+			icon: CreditCard,
 			isActive: true,
 			items: [],
 		},
@@ -85,29 +101,29 @@ const data = {
 		// 		},
 		// 	],
 		// },
-		{
-			title: "Settings",
-			url: "#",
-			icon: Settings2,
-			items: [
-				{
-					title: "General",
-					url: "#",
-				},
-				// {
-				// 	title: "Team",
-				// 	url: "#",
-				// },
-				{
-					title: "Billing",
-					url: "#",
-				},
-				// {
-				// 	title: "Limits",
-				// 	url: "#",
-				// },
-			],
-		},
+		// {
+		// 	title: "Settings",
+		// 	url: "#",
+		// 	icon: Settings2,
+		// 	items: [
+		// 		{
+		// 			title: "Profile",
+		// 			url: "/profile",
+		// 		},
+		// 		// {
+		// 		// 	title: "Team",
+		// 		// 	url: "#",
+		// 		// },
+		// 		{
+		// 			title: "Billing",
+		// 			url: "#",
+		// 		},
+		// 		// {
+		// 		// 	title: "Limits",
+		// 		// 	url: "#",
+		// 		// },
+		// 	],
+		// },
 	],
 	navSecondary: [
 		{

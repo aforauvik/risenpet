@@ -7,6 +7,8 @@ import {
 	CreditCard,
 	LogOut,
 	Sparkles,
+	User,
+	ShieldCheck,
 } from "lucide-react";
 
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -74,24 +76,23 @@ export function NavUser({user}) {
 						<DropdownMenuSeparator />
 						<DropdownMenuGroup>
 							<DropdownMenuItem>
-								<Sparkles />
+								<ShieldCheck />
 								Upgrade to Pro
 							</DropdownMenuItem>
 						</DropdownMenuGroup>
 						<DropdownMenuSeparator />
 						<DropdownMenuGroup>
 							<DropdownMenuItem>
-								<BadgeCheck />
-								Account
+								<User /> User Profile
 							</DropdownMenuItem>
 							<DropdownMenuItem>
 								<CreditCard />
 								Billing
 							</DropdownMenuItem>
-							<DropdownMenuItem>
+							{/* <DropdownMenuItem>
 								<Bell />
 								Notifications
-							</DropdownMenuItem>
+							</DropdownMenuItem> */}
 						</DropdownMenuGroup>
 						<DropdownMenuSeparator />
 						<DropdownMenuItem>

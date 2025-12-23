@@ -118,7 +118,7 @@ export function AddPetMedicalDetails() {
 													</div>
 													<Field>
 														<FieldLabel htmlFor={`medical-condition-${index}`}>
-															Note
+															Title
 														</FieldLabel>
 														<Input
 															id={`medical-condition-${index}`}
@@ -138,7 +138,7 @@ export function AddPetMedicalDetails() {
 													<Field>
 														<div className="flex flex-col w-full gap-3">
 															<Label htmlFor={`condition-description-${index}`}>
-																Note Details
+																Details
 															</Label>
 															<Textarea
 																placeholder="Type your note details here."
