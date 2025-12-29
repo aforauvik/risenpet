@@ -443,7 +443,7 @@ export default function IndividualPetProfile({params}) {
 															e.target.value
 														)
 													}
-													placeholder="Title"
+													placeholder="Title (e.g. Diabetes/Picky Eater)"
 												/>
 												<textarea
 													className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
@@ -495,7 +495,7 @@ export default function IndividualPetProfile({params}) {
 														condition: e.target.value,
 													}))
 												}
-												placeholder="Title"
+												placeholder="Title (e.g. Diabetes/Picky Eater)"
 											/>
 											<textarea
 												className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
@@ -546,7 +546,7 @@ export default function IndividualPetProfile({params}) {
 												condition: e.target.value,
 											}))
 										}
-										placeholder="Title"
+										placeholder="Title (e.g. Diabetes/Picky Eater)"
 									/>
 									<textarea
 										className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
 	BadgeCheck,
 	Bell,
@@ -76,18 +77,33 @@ export function NavUser({user}) {
 						<DropdownMenuSeparator />
 						<DropdownMenuGroup>
 							<DropdownMenuItem>
-								<ShieldCheck />
-								Upgrade to Pro
+								<Link
+									href="/upgrade"
+									className="flex items-center gap-2 w-full"
+								>
+									<ShieldCheck />
+									Upgrade to Pro
+								</Link>
 							</DropdownMenuItem>
 						</DropdownMenuGroup>
 						<DropdownMenuSeparator />
 						<DropdownMenuGroup>
 							<DropdownMenuItem>
-								<User /> User Profile
+								<Link
+									href="/profile"
+									className="flex items-center gap-2 w-full"
+								>
+									<User /> User Profile
+								</Link>
 							</DropdownMenuItem>
 							<DropdownMenuItem>
-								<CreditCard />
-								Billing
+								<Link
+									href="/billing"
+									className="flex items-center gap-2 w-full"
+								>
+									<CreditCard />
+									Billing
+								</Link>
 							</DropdownMenuItem>
 							{/* <DropdownMenuItem>
 								<Bell />
@@ -96,8 +112,10 @@ export function NavUser({user}) {
 						</DropdownMenuGroup>
 						<DropdownMenuSeparator />
 						<DropdownMenuItem>
-							<LogOut />
-							Log out
+							<Link href="/logout" className="flex items-center gap-2 w-full">
+								<LogOut />
+								Log out
+							</Link>
 						</DropdownMenuItem>
 					</DropdownMenuContent>
 				</DropdownMenu>
