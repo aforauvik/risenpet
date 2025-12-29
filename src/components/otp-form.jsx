@@ -18,6 +18,13 @@ import {
 	InputOTPSeparator,
 	InputOTPSlot,
 } from "@/components/ui/input-otp";
+import {AlertCircleIcon} from "lucide-react";
+import {
+	Alert,
+	AlertTitle,
+	AlertDescription,
+	AlertIcon,
+} from "@/components/ui/alert";
 
 export function OTPForm({className, ...props}) {
 	const [otp, setOtp] = useState("");
@@ -28,7 +35,7 @@ export function OTPForm({className, ...props}) {
 			router.push("/dashboard");
 			toast.success("Logged in successfully");
 		} else {
-			toast.error("Please enter a valid OTP");
+			toast.error("Invalid OTP");
 		}
 	};
 
@@ -84,15 +91,12 @@ export function OTPForm({className, ...props}) {
 							Didn&apos;t receive the code? <a href="#">Resend</a>
 						</FieldDescription>
 					</Field>
+
 					<Field>
 						<Button type="submit">Verify</Button>
 					</Field>
 				</FieldGroup>
 			</form>
-			<FieldDescription className="px-6 text-center">
-				By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-				and <a href="#">Privacy Policy</a>.
-			</FieldDescription>
 		</div>
 	);
 }

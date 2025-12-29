@@ -33,7 +33,7 @@ export default function AddPetMedicalDetailsPage() {
 								</BreadcrumbItem>
 								<BreadcrumbSeparator className="hidden md:block" />
 								<BreadcrumbItem>
-									<BreadcrumbPage>Add Pet Medical Details</BreadcrumbPage>
+									<BreadcrumbPage>Add Special Notes</BreadcrumbPage>
 								</BreadcrumbItem>
 							</BreadcrumbList>
 						</Breadcrumb>

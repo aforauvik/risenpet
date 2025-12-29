@@ -68,7 +68,7 @@ const users = [
 export default function AllPetProfiles() {
 	const router = useRouter();
 	return (
-		<Card className="flex flex-col w-full max-w-lg mx-auto">
+		<Card className="flex flex-col w-full max-w-2xl mx-auto">
 			<CardHeader>
 				<CardHeading>
 					<CardTitle>My Pets</CardTitle>

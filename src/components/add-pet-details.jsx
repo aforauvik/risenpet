@@ -128,7 +128,7 @@ export function AddPetDetails() {
 						{/* Step 1 content was shown on the previous page */}
 					</StepperContent>
 					<StepperContent value={2}>
-						<Card className="w-full max-w-sm mx-auto">
+						<Card className="w-full max-w-2xl mx-auto">
 							<CardHeader>
 								<CardTitle>Add Pet Details</CardTitle>
 								<CardDescription>Enter your pet details below</CardDescription>

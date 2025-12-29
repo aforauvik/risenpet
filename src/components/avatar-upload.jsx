@@ -137,14 +137,14 @@ export default function AvatarUpload({
 						{/* Step 2 content was shown on the previous page */}
 					</StepperContent>
 					<StepperContent value={3}>
-						<Card className="w-full max-w-sm mx-auto">
+						<Card className="w-full max-w-2xl mx-auto">
 							<CardHeader>
 								<CardTitle>Pet Profile Image</CardTitle>
 								<CardDescription>Upload your pet profile image</CardDescription>
 							</CardHeader>
 							<CardContent>
 								<div className="flex flex-col items-center gap-4">
-									<div className="border-2 border-dashed border-muted-foreground/10 rounded-md w-full max-w-sm px-4 py-4">
+									<div className="border-2 border-dashed border-muted-foreground/10 rounded-md w-full max-w-2xl px-4 py-4">
 										<div
 											className={cn(
 												"flex flex-col items-center gap-4",

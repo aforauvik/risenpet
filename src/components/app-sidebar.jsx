@@ -35,7 +35,7 @@ const data = {
 	user: {
 		name: "John Doe",
 		email: "john.doe@example.com",
-		avatar: "/john-doe.jpg",
+		avatar: null, //We don't need avatar for the user. We are not giving users the option to upload an avatar.
 	},
 	navMain: [
 		{

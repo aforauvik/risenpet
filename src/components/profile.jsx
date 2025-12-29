@@ -30,7 +30,7 @@ export default function Profile() {
 	};
 
 	return (
-		<Card className="w-full max-w-md mx-auto">
+		<Card className="w-full max-w-2xl mx-auto">
 			<CardHeader>
 				<CardTitle>Profile</CardTitle>
 				<CardDescription>
@@ -48,6 +48,7 @@ export default function Profile() {
 									id="name"
 									type="text"
 									placeholder="e.g. John Doe"
+									defaultValue="John Doe"
 									required
 								/>
 							</Field>
@@ -58,6 +59,7 @@ export default function Profile() {
 									id="email"
 									type="email"
 									placeholder="e.g. john.doe@example.com"
+									defaultValue="john.doe@example.com"
 									required
 								/>
 							</Field>
@@ -67,14 +69,15 @@ export default function Profile() {
 									id="phone"
 									type="tel"
 									placeholder="e.g. +1234567890"
+									defaultValue="+1234567890"
 									required
 								/>
 							</Field>
 
 							<div className="flex flex-col gap-4">
 								<Field>
-									<Button type="submit" className="w-full">
-										Edit Profile
+									<Button disabled={true} type="submit" className="w-full">
+										Update Profile
 									</Button>
 								</Field>
 							</div>

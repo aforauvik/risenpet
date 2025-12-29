@@ -155,7 +155,7 @@ export default function IndividualPetProfile({params}) {
 	// }
 
 	return (
-		<div className="flex flex-col w-full max-w-sm mx-auto">
+		<div className="flex flex-col w-full max-w-2xl mx-auto">
 			<Card>
 				<Image
 					src={`/${pet.avatar}`}

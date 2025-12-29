@@ -139,7 +139,7 @@ export function AddPetProfile() {
 				</StepperNav>
 				<StepperPanel>
 					<StepperContent value={1}>
-						<Card className="w-full max-w-sm mx-auto">
+						<Card className="w-full max-w-2xl mx-auto">
 							<CardHeader>
 								<CardTitle>Add Pet Profile</CardTitle>
 								<CardDescription>
