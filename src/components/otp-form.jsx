@@ -11,6 +11,7 @@ import {
 	FieldDescription,
 	FieldGroup,
 	FieldLabel,
+	FieldError,
 } from "@/components/ui/field";
 import {
 	InputOTP,
@@ -29,13 +30,17 @@ import {
 export function OTPForm({className, ...props}) {
 	const [otp, setOtp] = useState("");
 	const router = useRouter();
+	const [errors, setErrors] = useState([{message: null}]);
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (otp === "123456") {
 			router.push("/dashboard");
 			toast.success("Logged in successfully");
 		} else {
-			toast.error("Invalid OTP");
+			setErrors([
+				{message: "One-Time Password is incorrect. Please try again."},
+			]);
+			toast.error("One-Time Password is incorrect.");
 		}
 	};
 
@@ -55,7 +60,7 @@ export function OTPForm({className, ...props}) {
 							/>
 							<span className="sr-only">Risen Pet</span>
 						</a>
-						<h1 className="text-xl font-bold">Enter verification code</h1>
+						<h1 className="text-xl font-bold">Enter One-Time Password</h1>
 						<FieldDescription>
 							We sent a 6-digit code to your email address
 						</FieldDescription>
@@ -91,10 +96,12 @@ export function OTPForm({className, ...props}) {
 							Didn&apos;t receive the code? <a href="#">Resend</a>
 						</FieldDescription>
 					</Field>
-
-					<Field>
-						<Button type="submit">Verify</Button>
-					</Field>
+					<div className="flex flex-col items-center justify-center gap-4">
+						<FieldError errors={errors} />
+						<Field>
+							<Button type="submit">Verify</Button>
+						</Field>
+					</div>
 				</FieldGroup>
 			</form>
 		</div>

@@ -17,11 +17,12 @@ import {
 import {EmptyState} from "@/components/empty-state";
 import {AddPetProfile} from "@/components/add-pet-profile";
 import AvatarUpload from "@/components/avatar-upload";
-import AllPetProfiles from "@/components/all-pet-profiles";
+import AllPetProfiles, {users} from "@/components/all-pet-profiles";
 import IndividualPetProfile from "@/components/individual-pet-profile";
 import {ConnectQR} from "@/components/connect-qr";
 import DeleteAccount from "@/components/delete-account";
 import Profile from "@/components/profile";
+
 export default function Page() {
 	return (
 		<SidebarProvider>
@@ -54,11 +55,7 @@ export default function Page() {
 						<div className="bg-muted/50 aspect-video rounded-xl" />
 					</div> */}
 					<div className="flex justify-center">
-						{/* <ConnectQR /> */}
 						<AllPetProfiles />
-						{/* <IndividualPetProfile /> */}
-						{/* <EmptyState /> */}
-						{/* <AddPetSpecialNotes /> */}
 					</div>
 				</div>
 			</SidebarInset>

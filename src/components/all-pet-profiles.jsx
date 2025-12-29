@@ -5,6 +5,7 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 // Assuming you have Avatar components
 import {Badge} from "@/components/ui/badge"; // Assuming you have a Badge component
 import {Button} from "@/components/ui/button";
+import {EmptyState} from "@/components/empty-state";
 import {
 	Card,
 	CardContent,
@@ -17,7 +18,7 @@ import {
 import {useRouter} from "next/navigation";
 import {PlusIcon} from "lucide-react";
 // User data
-const users = [
+export const users = [
 	{
 		id: "1",
 		name: "Jaxs",
@@ -67,6 +68,15 @@ const users = [
 
 export default function AllPetProfiles() {
 	const router = useRouter();
+
+	if (!users.length) {
+		return (
+			<>
+				<EmptyState />
+			</>
+		);
+	}
+
 	return (
 		<Card className="flex flex-col w-full max-w-2xl mx-auto">
 			<CardHeader>
